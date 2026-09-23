@@ -7,9 +7,11 @@ namespace InventoryMaintenance
     public class InvItemList
     {
         private List<InvItem> invItems;
+        // Navya Gupta
 
         public delegate void ChangeHandler(InvItemList invItems);
         public event ChangeHandler Changed;
+        // Navya Gupta
 
         public InvItemList()
         {
@@ -17,6 +19,7 @@ namespace InventoryMaintenance
         }
 
         public int Count => invItems.Count;
+        // Navya Gupta
 
         public InvItem this[int i]
         {
@@ -38,13 +41,14 @@ namespace InventoryMaintenance
                 Changed(this);
             }
         }
-
+        // Navya Gupta
         public void Add(InvItem invItem)
         {
             invItems.Add(invItem);
             Changed(this);
         }
 
+        // Navya Gupta
         public void Add(int itemNo, string description, decimal price)
         {
             InvItem i = new InvItem(itemNo, description, price);
@@ -52,26 +56,31 @@ namespace InventoryMaintenance
             Changed(this);
         }
 
+        // Navya Gupta
         public void Remove(InvItem invItem)
         {
             invItems.Remove(invItem);
             Changed(this);
         }
 
+        // Navya Gupta
         public static InvItemList operator +(InvItemList il, InvItem i)
         {
             il.Add(i);
             return il;
         }
 
+        // Navya Gupta
         public static InvItemList operator -(InvItemList il, InvItem i)
         {
             il.Remove(i);
             return il;
         }
 
+        // Navya Gupta
         public void Fill() => invItems = InvItemDB.GetItems();
 
+        // Navya Gupta
         public void Save() => InvItemDB.SaveItems(invItems);
     }
 }

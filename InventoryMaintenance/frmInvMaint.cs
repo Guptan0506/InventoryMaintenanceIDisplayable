@@ -17,9 +17,10 @@ namespace InventoryMaintenance
         {
             InitializeComponent();
         }
-
+        // Navya Gupta
         private InvItemList invItems = new InvItemList();
 
+        // Navya Gupta
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
             invItems.Changed += new InvItemList.ChangeHandler(HandleChange);
@@ -27,6 +28,7 @@ namespace InventoryMaintenance
             FillItemListBox();
         }
 
+        // Navya Gupta
         private void FillItemListBox()
         {
             InvItem item;
@@ -38,6 +40,7 @@ namespace InventoryMaintenance
             }
         }
 
+        // Navya Gupta
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmNewItem newItemForm = new frmNewItem();
@@ -51,6 +54,7 @@ namespace InventoryMaintenance
             Debug.WriteLine($"Item is IDisplayable: {invItem is IDisplayable}");
         }
 
+        // Navya Gupta
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int i = lstItems.SelectedIndex;
@@ -69,12 +73,14 @@ namespace InventoryMaintenance
             }
         }
 
+        // Navya Gupta
         private void HandleChange(InvItemList invItems)
         {
             invItems.Save();
             FillItemListBox();
         }
 
+        // Navya Gupta
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

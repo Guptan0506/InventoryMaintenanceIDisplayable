@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryMaintenance
 {
+    // Navya Gupta
     public interface IDisplayable
     {
         public string GetDisplayText();

@@ -15,8 +15,10 @@ namespace InventoryMaintenance
             InitializeComponent();
         }
 
+        // Navya Gupta
         private InvItem invItem = null;
 
+        // Navya Gupta
         public InvItem GetNewItem()
         {
             LoadComboBox();
@@ -24,6 +26,7 @@ namespace InventoryMaintenance
             return invItem;
         }
 
+        // Navya Gupta
         private void LoadComboBox()
         {
             cboSizeOrManufacturer.Items.Clear();
@@ -45,6 +48,7 @@ namespace InventoryMaintenance
             }
         }
 
+        // Navya Gupta
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (IsValidData())
@@ -71,6 +75,7 @@ namespace InventoryMaintenance
             }
         }
 
+        // Navya Gupta
         private bool IsValidData()
         {
             return Validator.IsPresent(txtItemNo) &&
@@ -80,11 +85,13 @@ namespace InventoryMaintenance
                    Validator.IsDecimal(txtPrice);
         }
 
+        // Navya Gupta
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Navya Gupta
         private void rdoPlant_CheckedChanged(object sender, EventArgs e)
         {
             if (rdoPlant.Checked)

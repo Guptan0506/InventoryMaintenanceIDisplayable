@@ -6,8 +6,9 @@ namespace InventoryMaintenance
 {
     public class InvItem: IDisplayable
     {
-        public InvItem() { } 
+        public InvItem() { }
 
+        // Navya Gupta
         public InvItem(int itemNo, string description, decimal price)
         {
             ItemNo = itemNo;
@@ -15,10 +16,12 @@ namespace InventoryMaintenance
             Price = price;
         }
 
+        // Navya Gupta
         public int ItemNo { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
 
+        // Navya Gupta
         public string GetDisplayText()
         {
             return $"{ItemNo}    {Description} ({Price:c})";

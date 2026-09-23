@@ -8,13 +8,15 @@ namespace InventoryMaintenance
 	public static class Validator
 	{
 		private static string title = "Entry Error";
-		public static string Title
+        // Navya Gupta
+        public static string Title
 		{
 			get => title;
 			set => title = value;
 		}
 
-		public static bool IsPresent(TextBox textBox)
+        // Navya Gupta
+        public static bool IsPresent(TextBox textBox)
 		{
 			if (textBox.Text == "")
 			{
@@ -25,7 +27,8 @@ namespace InventoryMaintenance
 			return true;
 		}
 
-		public static bool IsDecimal(TextBox textBox)
+        // Navya Gupta
+        public static bool IsDecimal(TextBox textBox)
 		{
 			decimal number = 0m;
 			if (Decimal.TryParse(textBox.Text, out number))
@@ -40,7 +43,8 @@ namespace InventoryMaintenance
 			}
 		}
 
-		public static bool IsInt32(TextBox textBox)
+        // Navya Gupta
+        public static bool IsInt32(TextBox textBox)
 		{
 			int number = 0;
 			if (Int32.TryParse(textBox.Text, out number))
@@ -55,7 +59,8 @@ namespace InventoryMaintenance
 			}
 		}
 
-		public static bool IsWithinRange(TextBox textBox, decimal min, decimal max)
+        // Navya Gupta
+        public static bool IsWithinRange(TextBox textBox, decimal min, decimal max)
 		{
 			decimal number = Convert.ToDecimal(textBox.Text);
 			if (number < min || number > max)
